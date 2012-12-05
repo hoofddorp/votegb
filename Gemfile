@@ -38,6 +38,7 @@ gem 'twitter'
 gem 'gmaps4rails'
 gem 'simple_form'
 gem "rolify", ">= 3.2.0"
+gem 'country_select'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
