@@ -1,5 +1,7 @@
 Athletes::Application.routes.draw do
   
+  devise_for :admins
+
   match '/home', to: 'searches#new'
   
   authenticated :user do
