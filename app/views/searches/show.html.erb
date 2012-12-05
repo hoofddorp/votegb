@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @search.name %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @search.country %>
+</p>
+
+<p>
+  <b>Sport:</b>
+  <%= @search.sport %>
+</p>
+
+
+<%= link_to 'Edit', edit_search_path(@search) %> |
+<%= link_to 'Back', searches_path %>

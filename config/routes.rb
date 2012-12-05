@@ -1,10 +1,18 @@
 Athletes::Application.routes.draw do
   
-  devise_for :users
+  devise_for :admins
 
-  root :to => "home#index"
+  match '/home', to: 'searches#new'
   
+  authenticated :user do
+    root :to => redirect("/home")
+  end
+
+  root :to => redirect("/home")
+   
+  devise_for :users
   
+  resources :searches
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
