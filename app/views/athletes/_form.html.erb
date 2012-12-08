@@ -1,0 +1,22 @@
+<%= simple_form_for(@athlete) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :sport %>
+    <%= f.input :event %>
+    <%= f.input :dob %>
+    <%= f.input :age %>
+    <%= f.input :sex %>
+    <%= f.input :gold %>
+    <%= f.input :silver %>
+    <%= f.input :bronze %>
+    <%= f.input :total_medals %>
+    <%= f.input :region %>
+    <%= f.input :average_rating %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

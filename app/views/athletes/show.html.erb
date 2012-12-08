@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @athlete.name %>
+</p>
+
+<p>
+  <b>Sport:</b>
+  <%= @athlete.sport %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @athlete.event %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%= @athlete.dob %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @athlete.age %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @athlete.sex %>
+</p>
+
+<p>
+  <b>Gold:</b>
+  <%= @athlete.gold %>
+</p>
+
+<p>
+  <b>Silver:</b>
+  <%= @athlete.silver %>
+</p>
+
+<p>
+  <b>Bronze:</b>
+  <%= @athlete.bronze %>
+</p>
+
+<p>
+  <b>Total medals:</b>
+  <%= @athlete.total_medals %>
+</p>
+
+<p>
+  <b>Region:</b>
+  <%= @athlete.region %>
+</p>
+
+<p>
+  <b>Average rating:</b>
+  <%= @athlete.average_rating %>
+</p>
+
+
+<%= link_to 'Edit', edit_athlete_path(@athlete) %> |
+<%= link_to 'Back', athletes_path %>

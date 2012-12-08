@@ -1,3 +1,3 @@
 class Search < ActiveRecord::Base
-  attr_accessible :country, :name, :sport
+  attr_accessible :name, :sport
 end
