@@ -11,4 +11,6 @@ class User < ActiveRecord::Base
   
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive => false
+  
+  #acts_as_voter
 end

@@ -40,6 +40,9 @@ class AthletesController < ApplicationController
               @avg= ((@arr.inject(:+))/@arr.count).round(1)
           end
     end
+    #@vote = Vote.new(:vote => true)
+    #@athlete.votes    << vote
+    #user.votes << vote
 
     respond_to do |format|
       format.html # show.html.erb
