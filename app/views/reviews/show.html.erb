@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @review.user_id %>
+</p>
+
+<p>
+  <b>Athlete:</b>
+  <%= @review.athlete_id %>
+</p>
+
+<p>
+  <b>Performance rating:</b>
+  <%= @review.performance_rating %>
+</p>
+
+<p>
+  <b>Review summary:</b>
+  <%= @review.review_summary %>
+</p>
+
+<p>
+  <b>Review:</b>
+  <%= @review.review %>
+</p>
+
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>

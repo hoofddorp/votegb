@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121208214328) do
+ActiveRecord::Schema.define(:version => 20121209014033) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -46,6 +46,16 @@ ActiveRecord::Schema.define(:version => 20121208214328) do
     t.float    "average_rating"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "reviews", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "athlete_id"
+    t.float    "performance_rating"
+    t.string   "review_summary"
+    t.text     "review"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "searches", :force => true do |t|

@@ -1,5 +1,8 @@
 Athletes::Application.routes.draw do
   
+  resources :reviews
+
+
   get "users/index"
 
   get "users/destroy"
@@ -24,6 +27,8 @@ Athletes::Application.routes.draw do
   resources :users
   
   resources :searches
+  
+  match 'reviews/new', to: 'reviews#new', via: [:get, :post]
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

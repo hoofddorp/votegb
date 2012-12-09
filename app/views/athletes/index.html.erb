@@ -1,41 +1,49 @@
-<h1>Listing athletes</h1>
+<h1>Team GB athletes</h1>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Sport</th>
     <th>Event</th>
-    <th>Dob</th>
-    <th>Age</th>
-    <th>Sex</th>
-    <th>Gold</th>
-    <th>Silver</th>
-    <th>Bronze</th>
-    <th>Total medals</th>
-    <th>Region</th>
-    <th>Average rating</th>
+    <!--<th>Dob</th>-->
+    <!--<th>Age</th>-->
+    <!--<th>Sex</th>-->
+    <!--<th>Gold</th>-->
+    <!--<th>Silver</th>-->
+    <!--<th>Bronze</th>-->
+    <!--<th>Total medals</th>-->
+    <!--<th>Region</th>-->
+    <!--<th>Average rating</th>-->
     <th></th>
     <th></th>
     <th></th>
+    <% if admin_signed_in? %>
+    <th></th>
+    <th></th>
+    <%end%>
   </tr>
 
 <% @athletes.each do |athlete| %>
   <tr>
-    <td><%= athlete.name %></td>
-    <td><%= athlete.sport %></td>
-    <td><%= athlete.event %></td>
-    <td><%= athlete.dob %></td>
-    <td><%= athlete.age %></td>
-    <td><%= athlete.sex %></td>
-    <td><%= athlete.gold %></td>
-    <td><%= athlete.silver %></td>
-    <td><%= athlete.bronze %></td>
-    <td><%= athlete.total_medals %></td>
-    <td><%= athlete.region %></td>
-    <td><%= athlete.average_rating %></td>
+    <td>&nbsp;&nbsp;<%= athlete.name %></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.sport %></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.event %></td>
+    <!--<td><%= athlete.dob %></td>-->
+    <!--<td><%= athlete.age %></td>-->
+    <!--<td><%= athlete.sex %></td>-->
+    <!--<td><%= athlete.gold %></td>-->
+    <!--<td><%= athlete.silver %></td>-->
+    <!--<td><%= athlete.bronze %></td>-->
+    <!--<td><%= athlete.total_medals %></td>-->
+    <!--<td><%= athlete.region %></td>-->
+    <!--<td><%= @avg%></td>-->
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td><%= link_to 'Show', athlete %></td>
+    <% if admin_signed_in? %>
     <td><%= link_to 'Edit', edit_athlete_path(athlete) %></td>
     <td><%= link_to 'Destroy', athlete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <%end%>
   </tr>
 <% end %>
 </table>

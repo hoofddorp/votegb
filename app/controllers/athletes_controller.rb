@@ -3,7 +3,21 @@ class AthletesController < ApplicationController
   # GET /athletes.json
   def index
     @athletes = Athlete.all
-
+    #@arr=[]
+    #    @athletes.each do |athlete|
+    #      @reviews = athlete.reviews
+    #      if @reviews.count !=0
+    #        @reviews.each do |review|
+    #          if review.performance_rating != nil
+    #           @arr<< review.performance_rating
+    #          end
+    #          if @arr.count  != 0
+    #           @avg= ((@arr.inject(:+))/@arr.count).round(1)
+    #          end
+    #        end
+    #      end
+    #    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @athletes }
@@ -14,6 +28,18 @@ class AthletesController < ApplicationController
   # GET /athletes/1.json
   def show
     @athlete = Athlete.find(params[:id])
+    @reviews = @athlete.reviews
+    @arr=[]
+    if @reviews.count !=0
+    @reviews.each do |review|
+          if review.performance_rating != nil
+            @arr<< review.performance_rating
+          end
+        end
+          if @arr.count  != 0
+              @avg= ((@arr.inject(:+))/@arr.count).round(1)
+          end
+    end
 
     respond_to do |format|
       format.html # show.html.erb

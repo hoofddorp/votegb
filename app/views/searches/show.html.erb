@@ -1,20 +1,14 @@
-<p id="notice"><%= notice %></p>
+<%if @search.athletes.count ==  0 %>
+  <div>
+    <p>Sorry, no matches for your search!</p>
+  </div>
+ <%else%>
+   <h3>Matching Athletes:</h3>
+   <% @search.athletes.each do |athlete| %>
+    <div>
+      <h4>Name: <%= link_to athlete.name, athlete %></h4>
+      <h6>Sport: <%= athlete.sport %></h6>
+    </div>
+<%end%>
+<%end%>
 
-<p>
-  <b>Name:</b>
-  <%= @search.name %>
-</p>
-
-<p>
-  <b>Country:</b>
-  <%= @search.country %>
-</p>
-
-<p>
-  <b>Sport:</b>
-  <%= @search.sport %>
-</p>
-
-
-<%= link_to 'Edit', edit_search_path(@search) %> |
-<%= link_to 'Back', searches_path %>

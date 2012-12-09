@@ -19,7 +19,9 @@
           <div class="general-nav"
                			<div id="nav-centre"></div>
                                 <div id="nav-1"><%= link_to "Athletes", athletes_path %></div>
+                                <% if admin_signed_in? %>
 				<div id="nav-2"><%= link_to "Users", users_path %></div>
+                                <% end %>
 				<div id="nav-3"><a href="http://www.teamgb.com/" target = "_blank" >Team GB</a></div>
                                
           </div>     
