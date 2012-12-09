@@ -5,4 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-admins = Admin.create([{email: 'admin@admin.com', password: 'password', password_confirmation: 'password' }])
+#admins = Admin.create([{email: 'admin@admin.com', password: 'password', password_confirmation: 'password' }])
+
+records = JSON.parse(File.read('olympics.json'))
+records.each do |record|
+  Athlete.create!(record)
+end

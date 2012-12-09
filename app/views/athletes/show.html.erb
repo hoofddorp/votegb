@@ -1,64 +1,69 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @athlete.name %>
-</p>
+<div class="athlete_show_all_content">
 
-<p>
-  <b>Sport:</b>
-  <%= @athlete.sport %>
-</p>
+	<div>
+		<h1> <%= @athlete.name %> </h1>
+	</div>
 
-<p>
-  <b>Event:</b>
-  <%= @athlete.event %>
-</p>
+	<div class ="athlete_details">
 
-<p>
-  <b>Dob:</b>
-  <%= @athlete.dob %>
-</p>
-
-<p>
-  <b>Age:</b>
-  <%= @athlete.age %>
-</p>
-
-<p>
-  <b>Sex:</b>
-  <%= @athlete.sex %>
-</p>
-
-<p>
-  <b>Gold:</b>
-  <%= @athlete.gold %>
-</p>
-
-<p>
-  <b>Silver:</b>
-  <%= @athlete.silver %>
-</p>
-
-<p>
-  <b>Bronze:</b>
-  <%= @athlete.bronze %>
-</p>
-
-<p>
-  <b>Total medals:</b>
-  <%= @athlete.total_medals %>
-</p>
-
-<p>
-  <b>Region:</b>
-  <%= @athlete.region %>
-</p>
-
-<p>
-  <b>Average rating:</b>
-  <%= @athlete.average_rating %>
-</p>
+          <p>
+            <b>Sport:</b>
+            <%= @athlete.sport %>
+          </p>
+          
+          <p>
+            <b>Event:</b>
+            <%= @athlete.event %>
+          </p>
+          
+          <p>
+            <b>DOB:</b>
+            <%= @athlete.dob %>
+          </p>
+          
+          <p>
+            <b>Age:</b>
+            <%= @athlete.age %>
+          </p>
+          
+          <p>
+            <b>Sex:</b>
+            <%= @athlete.sex %>
+          </p>
+          
+          <p>
+            <b>Gold:</b>
+            <%= @athlete.gold %>
+          </p>
+          
+          <p>
+            <b>Silver:</b>
+            <%= @athlete.silver %>
+          </p>
+          
+          <p>
+            <b>Bronze:</b>
+            <%= @athlete.bronze %>
+          </p>
+          
+          <p>
+            <b>Total medals:</b>
+            <%= @athlete.total_medals %>
+          </p>
+          
+          <p>
+            <b>Region:</b>
+            <%= @athlete.region %>
+          </p>
+          
+          <p>
+            <b>Average rating:</b>
+            <%= @athlete.average_rating %>
+          </p>
+        </div>
+</div>
 
 
 <%= link_to 'Edit', edit_athlete_path(@athlete) %> |
