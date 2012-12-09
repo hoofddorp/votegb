@@ -1,5 +1,11 @@
 Athletes::Application.routes.draw do
   
+  get "users/index"
+
+  get "users/destroy"
+
+  get "users/show"
+
   resources :athletes
 
 
@@ -14,6 +20,8 @@ Athletes::Application.routes.draw do
   root :to => redirect("/home")
    
   devise_for :users
+  
+  resources :users
   
   resources :searches
   
