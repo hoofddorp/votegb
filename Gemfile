@@ -37,9 +37,10 @@ gem "cancan", ">= 1.6.8"
 gem 'twitter'
 gem 'gmaps4rails'
 gem 'simple_form'
-gem "rolify", ">= 3.2.0"
-gem 'country_select'
-gem 'acts_as_votable', '~> 0.4.0'
+#gem "rolify", ">= 3.2.0"
+#gem 'country_select'
+#gem 'acts_as_votable', '~> 0.4.0'
+gem 'thumbs_up'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

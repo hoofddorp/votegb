@@ -5,7 +5,11 @@
 	<div>
 		<h1> <%= @athlete.name %> </h1>
 	</div>
-
+        <div class="vote">
+          <%= link_to('vote for this athlete!', vote_up_athlete_path(@athlete), :method => :post) %>
+          </br><strong>
+          <%="Total votes = #{@total_votes}"%></strong></br></br>
+        </div>
 
 	<div class ="athlete_details">
 
@@ -64,11 +68,11 @@
             <%= @avg%>
           </p>
         </div>
-</div>
+</div></br>
 
 	<div class="review_athlete_headings">
 		<div class="athlete_review_title">
-			<h2>Reviews</h2>
+			<h3>Reviews</h3>
 		</div>
 
 		<div class="add_review_button_venue_show">

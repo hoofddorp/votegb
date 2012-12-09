@@ -9,7 +9,11 @@ Athletes::Application.routes.draw do
 
   get "users/show"
 
-  resources :athletes
+  resources :athletes do
+    member do
+      post :vote_up
+    end
+  end
 
 
   devise_for :admins

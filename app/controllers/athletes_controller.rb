@@ -17,6 +17,7 @@ class AthletesController < ApplicationController
     #        end
     #      end
     #    end
+    @total_votes
     
     respond_to do |format|
       format.html # index.html.erb
@@ -40,13 +41,34 @@ class AthletesController < ApplicationController
               @avg= ((@arr.inject(:+))/@arr.count).round(1)
           end
     end
-    #@vote = Vote.new(:vote => true)
+    #@user = User.find(params[:id])
+    #@user.vote_for(@athlete)
+    
+    #vote = Vote.new(:vote => true)
     #@athlete.votes    << vote
-    #user.votes << vote
+    ##user.votes << vote
+    #allVotes = @athlete.votes
+
+    #positiveVoteCount = @athlete.votes_for
+    
+    @total_votes = @athlete.votes_for
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @athlete }
+    end
+  end
+
+  def vote_up
+    begin
+      @athlete = Athlete.find(params[:id])
+      current_user.vote_for(@athlete)
+      @total_votes = @athlete.votes_for
+      redirect_to @athlete
+      flash[:sucess] = "Thanks for voting!"
+    rescue ActiveRecord::RecordInvalid
+      redirect_to @athlete
+      flash[:error] = "You have already voted!"
     end
   end
 
