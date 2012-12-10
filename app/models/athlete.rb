@@ -19,8 +19,8 @@ class Athlete < ActiveRecord::Base
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']}
   
   else
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" },
-  :default_url => "/images/index.jpeg"
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  #,:default_url => "/images/index.jpeg"
   end
 validates_attachment_content_type :avatar, :content_type => ['image/jpg', 'image/jpeg', 'image/png', 'image/pjepg', 'image/x-png', 'image/pjpeg']
 end
