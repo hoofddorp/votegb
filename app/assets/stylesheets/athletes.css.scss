@@ -1,3 +1,15 @@
 // Place all the styles related to the Athletes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+div.athlete_photo{ position: relative;
+	float: left;}
+
+div.athlete_photo_button{ position: relative;
+/*top: -25px;
+margin-top: 25px;*/
+}
+
+div.vote{
+    position: relative;
+    font-size:18px;
+}
