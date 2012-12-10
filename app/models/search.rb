@@ -7,7 +7,7 @@ class Search < ActiveRecord::Base
     @athletes ||= find_athletes
   end
   
-private
+#private
 
   def find_athletes
     athletes = Athlete.order(:name)
