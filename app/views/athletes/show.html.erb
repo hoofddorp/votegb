@@ -76,8 +76,27 @@
         </div></br>
         
 <div class="tweets">
-  @twitter
+ 
+  <div class="table">
+    <table class="tweet">
+    <legend>Latest Tweets from Team GB</legend>
+    <tr class="tweet">
+      <th class="tweet">
+        Tweet
+      </th>
+      <th class="tweet">
+        Sent
+      </th>
+    </tr>
+    <% @twitter.each do |twitter| %>
+      <td class="tweet"><div class="tweet_text"><%=twitter.text %></div></td>
+      <td class="tweet"><%=twitter.created_at.strftime("%d/%m/%Y") %></td>
+    </tr>
+    <%end%>
+    </table>
+  </div>
 </div>
+
       <div class="review_box">
 	<div class="review_athlete_headings">
 		<div class="athlete_review_title">
@@ -106,7 +125,7 @@
 					<div class= "reviews_speech_bubble">
 						<div class= "review_last_updated_athlete_show">
 							<p>Last updated on <%= review.updated_at.to_formatted_s(:long) %> </p>
-                                                        <p>Reviewed by <%= review.user %></p>
+                                                        <p>Reviewed by <%= @user.name %></p>
 						</div>
 
 						<div class = "speech_bubble_text">

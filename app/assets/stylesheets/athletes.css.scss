@@ -35,6 +35,28 @@ font-size: 14px;
 width: 450px;
 }
 
+div.tweets {
+position: relative;
+float:left;
+background-color: #E0E0E0;
+font-size: 20px;
+width: 450px;
+padding: 10px 40px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+div.tweet_text {
+position: relative;
+/*float:left;*/
+background-color: #3399FF;
+font-size: 14px;
+width: 250px;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
 div.review_athlete_headings {
 position: relative;
 float:left;

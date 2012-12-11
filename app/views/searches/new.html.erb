@@ -1,8 +1,32 @@
 </br><p class="home"><%= t :title %></p></br>
 <p class="explain"><%= t :description %></p></br>
 
-<h4><%= t :search %></h4>
+<div class="home_box">
+<div class="tweets">
+ 
+  <div class="table">
+    <table class="tweet">
+    <legend><h4>Latest Tweets from Team GB</h4></legend>
+    <tr class="tweet">
+      <th class="tweet">
+        Tweet
+      </th>
+      <th class="tweet">
+        Sent
+      </th>
+    </tr>
+    <% @twitter.each do |twitter| %>
+      <td class="tweet"><div class="tweet_text"><%=twitter.text %></div></td>
+      <td class="tweet"><%=twitter.created_at.strftime("%d/%m/%Y") %></td>
+    </tr>
+    <%end%>
+    </table>
+  </div>
+</div>
+<div class="search_box">
+<h4><%= t :search %></h4></br></br>
 
 <%= render 'form' %>
-
+</div>
+</div>
 <!--<%= link_to 'Back', searches_path %>-->
