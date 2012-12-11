@@ -41,3 +41,32 @@ float:left;
 font-size: 14px;
 width: 450px;
 }
+
+div.review_layout {
+position: relative;
+float:left;
+font-size: 14px;
+width: 450px;
+}
+
+div.reviews_speech_bubble {
+position: relative;
+float:left;
+background-color: #F8F8F8;
+font-size: 20px;
+width: 350px;
+padding: 10px 40px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+div.review_box {
+position: relative;
+float:left;
+background-color: #E0E0E0;
+font-size: 20px;
+width: 450px;
+padding: 10px 40px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}

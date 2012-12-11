@@ -9,7 +9,7 @@
         <div class="vote">
           <% if user_signed_in? %>
             <%= link_to('vote for this athlete!', vote_up_athlete_path(@athlete), :method => :post) %>
-            </br><strong>
+            </br></br><strong>
           <% else %>
             <p> Please sign in to vote <%= link_to "Sign in", new_user_session_path %></p>
           <% end %>
@@ -71,13 +71,14 @@
           <p>
             <b>Average rating:</b>
             <%= @avg%>
-          </p>
+          </p></br>
         </div>
-</div></br>
-<!--<div class="tweets">
+        </div></br>
+        
+<div class="tweets">
   @twitter
-</div>-->
-
+</div>
+      <div class="review_box">
 	<div class="review_athlete_headings">
 		<div class="athlete_review_title">
 			<h3>Reviews</h3>
@@ -105,17 +106,18 @@
 					<div class= "reviews_speech_bubble">
 						<div class= "review_last_updated_athlete_show">
 							<p>Last updated on <%= review.updated_at.to_formatted_s(:long) %> </p>
+                                                        <p>Reviewed by <%= review.user %></p>
 						</div>
 
 						<div class = "speech_bubble_text">
-							<p class="review_summary_athlete_show"> <%= review.review_summary %> </p>
-							<p> Star Rating: <%= review.performance_rating %> </p>
-							<p class="review_heading_speech_bubble"> Review: </p>
+							<p class="review_summary_athlete_show"><strong> <%= review.review_summary %></strong> </p>
+							<p> <strong>Star Rating:</strong> <%= review.performance_rating %> </p>
+							<p class="review_heading_speech_bubble"><strong> Review: </strong></p>
 							<p>  <%= review.review %> </p>
 							<% if user_signed_in? || admin_signed_in? %>
                                                           	<div class= "review_athlete_links">
 									<%= button_to 'Edit', edit_review_path(review), :method => "get" %>
-									<%= button_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure you want to delete this review?' } %>
+                                                                        <%= button_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure you want to delete this review?' } %>
 								</div>
 								<% if current_user == review.user || admin_signed_in? %>
 
@@ -123,7 +125,6 @@
 							<% end %>
 						</div>
 					</div>
-
 				</div>
 			<%end%>
 			<!-- <p><% flash.each do |key, value| %>
@@ -131,5 +132,5 @@
 			<% end %></p> !-->
 		</div>
 	</div>
-
+      
 
