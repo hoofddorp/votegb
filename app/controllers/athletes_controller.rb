@@ -28,6 +28,8 @@ class AthletesController < ApplicationController
   # GET /athletes/1
   # GET /athletes/1.json
   def show
+    #require 'twitter'
+    #@twitter=Twitter.user_timeline("@Team GB")
     @athlete = Athlete.find(params[:id])
     @reviews = @athlete.reviews
     @arr=[]

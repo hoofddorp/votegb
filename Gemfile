@@ -35,7 +35,7 @@ gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
 gem "bootstrap-sass", ">= 2.1.0.0"
 gem "devise", ">= 2.1.2"
 gem "cancan", ">= 1.6.8"
-gem 'twitter'
+gem "twitter", :require => "twitter"
 gem 'gmaps4rails'
 gem 'simple_form'
 #gem "rolify", ">= 3.2.0"
