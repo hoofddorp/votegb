@@ -19,18 +19,20 @@ position: relative;
 width: 800px;
 padding: 5px 10px;
 height: 420px;
+/*border: 2px solid #a1a1a1;*/
 }
 
 div.tweets {
 position: relative;
-float:right;
+float:left;
 background-color: #E0E0E0;
 font-size: 14px;
-width: 320px;
+width: 300px;
 padding: 10px 30px;
 border: 2px solid #a1a1a1;
 border-radius: 25px;
 height: 380px;
+margin: 10px;
 }
 
 div.tweet_text {
@@ -49,9 +51,10 @@ position: relative;
 float:left;
 background-color: #E0E0E0;
 font-size: 20px;
-width: 380px;
+width: relative;
 padding: 10px 30px;
 border: 2px solid #a1a1a1;
 border-radius: 25px;
 height: 380px;
+margin: 10px;
 }

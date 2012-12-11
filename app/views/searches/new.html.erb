@@ -2,6 +2,12 @@
 <p class="explain"><%= t :description %></p></br>
 
 <div class="home_box">
+  
+  <div class="search_box">
+    <h4><%= t :search %></h4></br></br>
+
+    <%= render 'form' %>
+  </div>
   <div class="tweets">
  
     <div class="table">
@@ -24,10 +30,6 @@
       </table>
     </div>
   </div>
-  <div class="search_box">
-    <h4><%= t :search %></h4></br></br>
 
-    <%= render 'form' %>
-  </div>
 </div>
 <!--<%= link_to 'Back', searches_path %>-->
