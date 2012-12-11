@@ -6,8 +6,12 @@
 		<h1> <%= @athlete.name %> </h1>
 	</div>
         <div class="vote">
+          <% if user_signed_in? %>
           <%= link_to('vote for this athlete!', vote_up_athlete_path(@athlete), :method => :post) %>
           </br><strong>
+          <% else %>
+            <p> Please sign in to vote <%= link_to "Sign in", new_user_session_path %></p>
+          <% end %>
           <%="Total votes = #{@total_votes}"%></strong></br></br>
         </div>
 
