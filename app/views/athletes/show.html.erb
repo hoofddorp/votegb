@@ -5,10 +5,11 @@
 	<div>
 		<h1> <%= @athlete.name %> </h1>
 	</div>
+        </br>
         <div class="vote">
           <% if user_signed_in? %>
-          <%= link_to('vote for this athlete!', vote_up_athlete_path(@athlete), :method => :post) %>
-          </br><strong>
+            <%= link_to('vote for this athlete!', vote_up_athlete_path(@athlete), :method => :post) %>
+            </br><strong>
           <% else %>
             <p> Please sign in to vote <%= link_to "Sign in", new_user_session_path %></p>
           <% end %>
@@ -16,7 +17,7 @@
         </div>
 
 	<div class ="athlete_details">
-
+          </br></br>
           <p>
             <b>Sport:</b>
             <%= @athlete.sport %>
@@ -132,5 +133,3 @@
 	</div>
 
 
-<%= link_to 'Edit', edit_athlete_path(@athlete) %> |
-<%= link_to 'Back', athletes_path %>

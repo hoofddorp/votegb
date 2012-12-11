@@ -2,9 +2,9 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Sport</th>
-    <th>Event</th>
+    <th id="index_header">Name</th>
+    <th id="index_header">Sport</th>
+    <th id="index_header">Event</th>
     <!--<th>Dob</th>-->
     <!--<th>Age</th>-->
     <!--<th>Sex</th>-->
@@ -13,14 +13,14 @@
     <!--<th>Bronze</th>-->
     <!--<th>Total medals</th>-->
     <!--<th>Region</th>-->
-    <th>Votes</th>
+    <th id="index_header">Votes</th>
     <th></th>
     <th></th>
     <th></th>
     <% if admin_signed_in? %>
     <th></th>
     <th></th>
-    <%end%>
+     <%end%>
   </tr>
 
 <% @athletes.each do |athlete| %>
@@ -36,7 +36,7 @@
     <!--<td><%= athlete.bronze %></td>-->
     <!--<td><%= athlete.total_medals %></td>-->
     <!--<td><%= athlete.region %></td>-->
-    <td><%= athlete.votes_for%></td>
+    <td><div class="index_vote"><%= athlete.votes_for%></div></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td><%= link_to 'Show', athlete %></td>

@@ -1,3 +1,43 @@
 // Place all the styles related to the Athletes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.index_vote {
+position: relative;
+/*float:left;*/
+background-color: #E0E0E0;
+font-size: 14px;
+width: 20px;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+#index_header{
+font-size: 16px;
+}
+
+div.vote {
+position: relative;
+float:left;
+background-color: #E0E0E0;
+font-size: 20px;
+width: 450px;
+padding: 10px 40px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+div.athlete_details {
+position: relative;
+float:left;
+font-size: 14px;
+width: 450px;
+}
+
+div.review_athlete_headings {
+position: relative;
+float:left;
+font-size: 14px;
+width: 450px;
+}
