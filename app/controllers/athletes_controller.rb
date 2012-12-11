@@ -70,6 +70,7 @@ class AthletesController < ApplicationController
       redirect_to @athlete
       flash[:error] = "You have already voted!"
     end
+    #render :js =>  "alert('You may vote for as many different athletes as you like.');"
   end
 
   # GET /athletes/new
