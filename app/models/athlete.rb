@@ -12,7 +12,7 @@ class Athlete < ActiveRecord::Base
   if Rails.env.production?
   has_attached_file :avatar,
 
-  :styles => { :medium => "600x600>", :thumb => "100x100>" },
+  :styles => { :medium => "300x300>", :thumb => "100x100>" },
     :storage => :s3,
     :url => ":s3_domain_url",
     :path => "/:class/avatars/:id_:basename.:style.:extension",
