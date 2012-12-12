@@ -1,4 +1,4 @@
-<h1>Team GB athletes</h1>
+<h1>Team GB athletes</h1></br>
 
 <table>
   <tr>
@@ -16,7 +16,7 @@
     <th id="index_header">Votes</th>
     <th></th>
     <th></th>
-    <th></th>
+    <!--<th></th>-->
     <% if admin_signed_in? %>
     <th></th>
     <th></th>
@@ -25,9 +25,9 @@
 
 <% @athletes.each do |athlete| %>
   <tr>
-    <td>&nbsp;&nbsp;<%= athlete.name %></td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.sport %></td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.event %></td>
+    <td><p class="ath_name_colour"><div class="index_athlete">&nbsp;&nbsp;<%= link_to athlete.name, athlete %></div></p></td>
+    <td><div class="index_sport">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.sport %></div></td>
+    <td><div class="index_event">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.event %></div></td>
     <!--<td><%= athlete.dob %></td>-->
     <!--<td><%= athlete.age %></td>-->
     <!--<td><%= athlete.sex %></td>-->
@@ -39,7 +39,7 @@
     <td><div class="index_vote"><%= athlete.votes_for%></div></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td><%= link_to 'Show', athlete %></td>
+    <!--<td><%= link_to 'Show', athlete %></td>-->
     <% if admin_signed_in? %>
     <td><%= link_to 'Edit', edit_athlete_path(athlete) %></td>
     <td><%= link_to 'Destroy', athlete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -49,5 +49,6 @@
 </table>
 
 <br />
-
+<% if admin_signed_in? %>
 <%= link_to 'New Athlete', new_athlete_path %>
+<%end%>

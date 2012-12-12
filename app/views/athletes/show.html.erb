@@ -2,9 +2,6 @@
 
 <div class="athlete_show_all_content">
 
-	<div>
-		<h1> <%= @athlete.name %> </h1>
-	</div>
         </br>
         <div class="vote">
           <% if user_signed_in? %>
@@ -18,7 +15,10 @@
         <div class="divide"></div>
 
 	<div class ="athlete_details">
-          </br></br>
+          <div>
+		<h1> <%= @athlete.name %> </h1>
+          </div>
+          </br>
           <p>
             <b>Sport:</b>
             <%= @athlete.sport %>

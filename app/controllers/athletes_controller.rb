@@ -31,7 +31,7 @@ class AthletesController < ApplicationController
     #require 'twitter'
     @twitter=Twitter.user_timeline("@teamgb")[0..2]
     #@twitter=Twitter.follow("@Team GB")
-    @user = User.find(params[:id])
+    #@user = User.find(params[:id])
     @athlete = Athlete.find(params[:id])
     @reviews = @athlete.reviews
     @arr=[]

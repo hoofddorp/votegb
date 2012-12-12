@@ -13,6 +13,44 @@ border: 2px solid #a1a1a1;
 border-radius: 25px;
 }
 
+div.index_athlete {
+position: relative;
+/*float:left;*/
+background-color: #FF4500;
+font-weight: bold;
+font-size: 14px;
+width: 150px;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+p.ath_name_colour {
+    color:#FFFFFF;
+}
+
+div.index_sport {
+position: relative;
+/*float:left;*/
+background-color: #FFFFFF;
+font-size: 14px;
+width: 170px;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+div.index_event {
+position: relative;
+/*float:left;*/
+background-color: #6699FF;
+font-size: 14px;
+width: 250px;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
 #index_header{
 font-size: 16px;
 }

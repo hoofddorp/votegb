@@ -23,7 +23,13 @@
 				<div id="nav-1"><%= link_to "Users", users_path %></div>
                                 <% end %>
 				<div id="nav-1"><a href="http://www.teamgb.com/" target = "_blank" >Team GB</a></div>
-                                <div id="nav-1"><%= link_to "French", "/home?lang=fr" %></div>
+                               
+                                
+                                <% if current_page?("/home?lang=fr") %>
+                                <div id="nav-1"><%= link_to "English", root_path %></div>
+                                <% else %>
+                                <div id="nav-1"><%= link_to "Français", "/home?lang=fr" %></div>
+                                <% end %>
                                
           </div>     
         </div>
