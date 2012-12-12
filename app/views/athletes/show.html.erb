@@ -2,7 +2,7 @@
 
 <div class="athlete_show_all_content">
 
-        </br>
+      
         <div class="vote">
           <% if user_signed_in? %>
             <%= link_to('vote for this athlete!', vote_up_athlete_path(@athlete), :method => :post) %>
@@ -19,6 +19,7 @@
 		<h1> <%= @athlete.name %> </h1>
           </div>
           </br>
+          <div class="ath_details_box">
           <p>
             <b>Sport:</b>
             <%= @athlete.sport %>
@@ -72,7 +73,21 @@
           <p>
             <b>Average rating:</b>
             <%= @avg%>
-          </p></br>
+          </p>
+          </div></br>
+          <div class= "athlete_photo">
+	      <%= image_tag @athlete.avatar.url(:medium) %>
+	  </div></br>
+              <%= form_for(@athlete) do |f| %>
+          <div class="upload_photo">
+            <%= f.label "Upload a photo of this athlete" %><br />
+            <%= f.file_field :avatar %>
+          
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+          </div>
+	      <% end %>
         </div>
         </div></br>
         <div class="divide"></div>

@@ -13,6 +13,18 @@ border: 2px solid #a1a1a1;
 border-radius: 25px;
 }
 
+div.athletes_index {
+position: relative;
+/*float:left;*/
+/*background-color: #FF4500;
+font-weight: bold;
+font-size: 14px;
+width: 150px;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;*/
+}
+
 div.index_athlete {
 position: relative;
 /*float:left;*/
@@ -76,10 +88,30 @@ div.athlete_details {
 position: relative;
 float:left;
 font-size: 14px;
-width: 450px;
-padding: 10px 40px;
+width: 620px;
+padding: 10px 20px;
 border: 2px solid #a1a1a1;
 border-radius: 25px;
+}
+
+div.ath_details_box {
+position: relative;
+float:left;
+font-size: 14px;
+width: 240px;
+padding: 10px 10px;
+}
+
+div.athlete_photo {
+position: relative;
+float:left;
+width: relative;
+padding: 10px 20px;
+}
+
+div.upload_photo {
+    position: relative;
+    float: left;
 }
 
 /*div.tweets {
