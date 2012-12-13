@@ -1,17 +1,26 @@
 // Place all the styles related to the Searches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+div.intro {
+    width: relative;
+    padding: 10px 20px;
+    border: 2px solid #a1a1a1;
+    border-radius: 25px;
+    margin-left: 20px;
+    background-color: #FFFFFF;
+}
+
 p.home {
-    width: 850px;
-    font-size: 20px;
-    color: #282828;
+    width: relative;
+    font-size: 22px;
+    color: black;
     font-weight: bold;
 }
 
 p.explain {
-    width: 600px;
+    width: relative;
     font-style: italic;
-    color: #848484;
+    color: #600000;
 }
 
 div.home_box {

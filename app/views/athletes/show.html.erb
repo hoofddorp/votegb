@@ -38,7 +38,7 @@
       
         <div class="vote">
           <% if user_signed_in? %>
-            <%= link_to('vote for this athlete!', vote_up_athlete_path(@athlete), :method => :post) %>
+            <%= link_to('vote for this athlete!', vote_up_athlete_path(@athlete), :method => :post, :style => "color:red")%>
             </br></br><strong>
           <% else %>
             <p> Please sign in to vote <%= link_to "Sign in", new_user_session_path %></p>

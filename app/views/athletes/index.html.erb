@@ -1,10 +1,10 @@
-<h1>Team GB athletes</h1></br>
+<h1 style = "color:#FFFFFF">Team GB athletes</h1></br>
 <div class= "athletes_index">
 <table>
   <tr>
-    <th id="index_header">Name</th>
-    <th id="index_header">Sport</th>
-    <th id="index_header">Event</th>
+    <th id="index_header" style = "color:#FFFFFF">Name</th>
+    <th id="index_header" style = "color:#FFFFFF">Sport</th>
+    <th id="index_header" style = "color:#FFFFFF">Event</th>
     <!--<th>Dob</th>-->
     <!--<th>Age</th>-->
     <!--<th>Sex</th>-->
@@ -13,7 +13,7 @@
     <!--<th>Bronze</th>-->
     <!--<th>Total medals</th>-->
     <!--<th>Region</th>-->
-    <th id="index_header">Votes</th>
+    <th id="index_header" style = "color:#FFFFFF">Votes</th>
     <th></th>
     <th></th>
     <!--<th></th>-->
@@ -41,8 +41,8 @@
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <!--<td><%= link_to 'Show', athlete %></td>-->
     <% if admin_signed_in? %>
-    <td><%= link_to 'Edit', edit_athlete_path(athlete) %></td>
-    <td><%= link_to 'Destroy', athlete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><div class="index_vote"><%= link_to 'Edit', edit_athlete_path(athlete) %></div></td>
+    <td><div class="index_vote"><%= link_to 'Destroy', athlete, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
     <%end%>
   </tr>
 <% end %>
@@ -50,5 +50,5 @@
 </div>
 <br />
 <% if admin_signed_in? %>
-<%= link_to 'New Athlete', new_athlete_path %>
+<%= link_to 'Update Athletes', new_athlete_path, :style => "color:#FFFFFF" %>
 <%end%>

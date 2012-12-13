@@ -42,11 +42,11 @@
             <div class="span12">
               <div id="user_nav">
                 <% if admin_signed_in? %>
-                  <p>Signed in as <%= current_admin.email %></p>
-                  <p><%= link_to "Sign out", destroy_admin_session_path, :method => :delete %> </p>
+                  <p style = "color:#FFFFFF">Signed in as <%= current_admin.email %> </p>
+                  <p><%= link_to "Sign out", destroy_admin_session_path, :method => :delete, :style => "color:#FFFFFF" %> </p>
                 <% elsif user_signed_in? %>
-                  <p>Signed in as <%= current_user.name %>. Not you?
-                  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></p>
+                  <p style = "color:#FFFFFF">Signed in as <%= current_user.name %>. Not you?
+                  <%= link_to "Sign out", destroy_user_session_path, :method => :delete,:style => "color:#FFFFFF" %></p>
                 <% end %>
               </div>
               <%= render 'layouts/messages' %>
