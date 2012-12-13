@@ -3,6 +3,10 @@ class AthletesController < ApplicationController
   # GET /athletes.json
   def index
     @athletes = Athlete.all
+    
+    @athletes.each do |athlete|
+    @athlete = athlete
+    end
     #@arr=[]
     #    @athletes.each do |athlete|
     #      @reviews = athlete.reviews

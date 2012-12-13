@@ -12,7 +12,7 @@ class Athlete < ActiveRecord::Base
   if Rails.env.production?
   has_attached_file :avatar,
 
-  :styles => { :medium => "300x300>", :thumb => "100x100>" },
+  :styles => { :medium => "300x300>", :thumb => "20x20>" },
     :storage => :s3,
     :url => ":s3_domain_url",
     :default_url => "http://awadvotegb.s3.amazonaws.com/avatar/missing_medium.jpeg",
@@ -23,7 +23,7 @@ class Athlete < ActiveRecord::Base
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']}
 else
   has_attached_file :avatar,
-   :styles => { :medium => "300x300>", :thumb => "100x100>" },
+   :styles => { :medium => "300x300>", :thumb => "20x20>" },
    :default_url => "/avatars/medium/missing_:style.jpeg"
    
   end
