@@ -31,7 +31,7 @@ position: relative;
 background-color: #FFFFFF;
 font-weight: bold;
 font-size: 14px;
-width: 150px;
+width: relative;
 padding: 10px 20px;
 border: 2px solid #a1a1a1;
 border-radius: 25px;
@@ -46,7 +46,7 @@ position: relative;
 /*float:left;*/
 background-color: #FFFFFF;
 font-size: 14px;
-width: 170px;
+width: relative;
 padding: 10px 20px;
 border: 2px solid #a1a1a1;
 border-radius: 25px;
@@ -57,7 +57,7 @@ position: relative;
 /*float:left;*/
 background-color: #FFFFFF;
 font-size: 14px;
-width: 250px;
+width: relative;
 padding: 10px 20px;
 border: 2px solid #a1a1a1;
 border-radius: 25px;
@@ -208,5 +208,5 @@ width: 450px;
 padding: 10px 40px;
 border: 2px solid #a1a1a1;
 border-radius: 25px;
-margin-left: 20px;
+margin-left: 25px;
 }
