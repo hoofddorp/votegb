@@ -15,6 +15,7 @@ class Athlete < ActiveRecord::Base
   :styles => { :medium => "300x300>", :thumb => "100x100>" },
     :storage => :s3,
     :url => ":s3_domain_url",
+    :default_url => '/avatars/:attachment/missing_:style.jpeg',
     :path => "/:class/avatars/:id_:basename.:style.:extension",
     :s3_credentials => {
       :bucket            => ENV['S3_BUCKET_NAME'],
@@ -22,7 +23,8 @@ class Athlete < ActiveRecord::Base
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']}
 else
   has_attached_file :avatar,
-   :styles => { :medium => "300x300>", :thumb => "100x100>" }
+   :styles => { :medium => "300x300>", :thumb => "100x100>" },
+   :default_url => '/avatars/:attachment/missing_:style.jpeg'
    
   end
   validates_attachment_content_type :avatar, :content_type => ['image/jpg', 'image/jpeg', 'image/png', 'image/pjepg', 'image/x-png', 'image/pjpeg']

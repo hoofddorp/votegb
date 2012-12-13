@@ -88,18 +88,35 @@ div.athlete_details {
 position: relative;
 float:left;
 font-size: 14px;
-width: 620px;
-padding: 10px 20px;
+width: relative;
+padding: 10px 10px;
 border: 2px solid #a1a1a1;
 border-radius: 25px;
+}
+
+div.ath_box {
+position: relative;
+float:left;
+width: 600px;
+padding: 10px 10px;
+height: 540px;
 }
 
 div.ath_details_box {
 position: relative;
 float:left;
 font-size: 14px;
-width: 240px;
+width: 200px;
 padding: 10px 10px;
+height: 520px;
+}
+
+div.map_photo{
+    margin-bottom: 20px;
+    width: relative;
+    position: relative;
+    float:left;
+    margin-left: 50px;
 }
 
 div.athlete_photo {
@@ -107,11 +124,29 @@ position: relative;
 float:left;
 width: relative;
 padding: 10px 20px;
+border-radius: 25px;
+border: 2px solid #333;
+}
+
+div.photo_image {
+    margin-left: auto;
+    margin-right: auto;
+/*    width: 80%;*/
 }
 
 div.upload_photo {
     position: relative;
     float: left;
+}
+
+div.athlete_map{
+	border: 2px solid #333;
+	width:120px;
+	height: 200px;
+	z-index: 5;
+        position: relative;
+        float:left;
+        margin-left: 10px;
 }
 
 /*div.tweets {
@@ -148,6 +183,7 @@ position: relative;
 float:left;
 font-size: 14px;
 width: 450px;
+margin-left: 100px;
 }
 
 div.reviews_speech_bubble {
@@ -170,4 +206,5 @@ width: 450px;
 padding: 10px 40px;
 border: 2px solid #a1a1a1;
 border-radius: 25px;
+margin-left: 20px;
 }

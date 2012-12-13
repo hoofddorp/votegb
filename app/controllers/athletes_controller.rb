@@ -54,6 +54,7 @@ class AthletesController < ApplicationController
     #allVotes = @athlete.votes
 
     #positiveVoteCount = @athlete.votes_for
+    @place = @athlete.region + ' ' + "UK"
     
     @total_votes = @athlete.votes_for
 
@@ -100,7 +101,7 @@ class AthletesController < ApplicationController
 
     respond_to do |format|
       if @athlete.save
-        format.html { redirect_to @athlete, notice: 'Athlete was successfully created.' }
+        format.html { redirect_to @athlete }
         format.json { render json: @athlete, status: :created, location: @athlete }
       else
         format.html { render action: "new" }
@@ -116,7 +117,7 @@ class AthletesController < ApplicationController
 
     respond_to do |format|
       if @athlete.update_attributes(params[:athlete])
-        format.html { redirect_to @athlete, notice: 'Athlete was successfully updated.' }
+        format.html { redirect_to @athlete}
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
