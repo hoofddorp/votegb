@@ -1,4 +1,4 @@
-<div class="review_form">
+<div class="review_form" style = "color:#FFFFFF">
 <%= simple_form_for(@review) do |f| %>
   <% if @review.errors.any? %>
     <div id="error_explanation">
@@ -13,7 +13,7 @@
   <% end %>
 
 
-    <%= f.hidden_field :user_id , :user=>params[:user_id] %>
+    <%= f.hidden_field :user_id , :value=>params[:user_id] %>
 
     <%= f.hidden_field :athlete_id , :value=>params[:athlete_id] %>
 

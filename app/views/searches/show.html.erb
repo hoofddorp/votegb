@@ -1,13 +1,15 @@
 <%if @search.athletes.count ==  0 %>
   <div>
-    <p>Sorry, no matches for your search!</p>
+    <p id="no_match" style = "color:#FFFFFF">Sorry, no matches for your search!</p>
   </div>
+    <%= link_to "Home", root_path,:style => "color:#FFFFFF" %>
  <%else%>
-   <h3>Matching Athletes:</h3>
+   <h3 style = "color:#FFFFFF">Matching Athletes:</h3>
    <% @search.athletes.each do |athlete| %>
-    <div>
-      <h4>Name: <%= link_to athlete.name, athlete %></h4>
+    <div class="search_list">
+      <h4>Name: <%= link_to athlete.name, athlete,:style => "color:#FFFFFF" %></h4></br>
       <h6>Sport: <%= athlete.sport %></h6>
+      <p>&nbsp;</p>
     </div>
 <%end%>
 <%end%>

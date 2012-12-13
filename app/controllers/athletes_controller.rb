@@ -36,7 +36,7 @@ class AthletesController < ApplicationController
     @twitter=Twitter.user_timeline("@teamgb")[0..2]
     #@twitter=Twitter.follow("@Team GB")
     #@user = User.find(params[:id])
-    @athlete = Athlete.find(params[:id])
+    @athlete = Athlete.find(params[:id], :include => { :reviews => :user } )
     @reviews = @athlete.reviews
     @arr=[]
     if @reviews.count !=0
@@ -61,6 +61,8 @@ class AthletesController < ApplicationController
     @place = @athlete.region + ' ' + "UK"
     
     @total_votes = @athlete.votes_for
+    
+    #@username = review.user_id
 
     respond_to do |format|
       format.html # show.html.erb
