@@ -26,7 +26,7 @@
 
 <% @athletes.each do |athlete| %>
   <tr>
-    <td><div class="thumb_image"><%= image_tag @athlete.avatar.url(:thumb) %></div></td>
+    <td><div class="thumb_image"><%= image_tag athlete.avatar.url(:thumb) %></div></td>
     <td><p class="ath_name_colour"><div class="index_athlete">&nbsp;&nbsp;<%= link_to athlete.name, athlete %></div></p></td>
     <td><div class="index_sport">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.sport %></div></td>
     <td><div class="index_event">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.event %></div></td>
