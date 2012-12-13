@@ -15,7 +15,7 @@ class Athlete < ActiveRecord::Base
   :styles => { :medium => "300x300>", :thumb => "100x100>" },
     :storage => :s3,
     :url => ":s3_domain_url",
-    :default_url => "awadvotegb.s3.amazonaws.com/avatar/missing_medium.jpeg",
+    :default_url => "http://awadvotegb.s3.amazonaws.com/avatar/missing_medium.jpeg",
     :path => "/:class/avatar/:id_:basename.:style.:extension",
     :s3_credentials => {
       :bucket            => ENV['S3_BUCKET_NAME'],
