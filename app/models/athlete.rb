@@ -12,7 +12,7 @@ class Athlete < ActiveRecord::Base
   if Rails.env.production?
   has_attached_file :avatar,
 
-  :styles => { :medium => "300x300>", :thumb => "20x20>" },
+  :styles => { :medium => "300x300>", :thumb => "36x36>" },
     :storage => :s3,
     :url => ":s3_domain_url",
     :default_url => "http://awadvotegb.s3.amazonaws.com/avatar/missing_medium.jpeg",
