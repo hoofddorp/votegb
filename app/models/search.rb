@@ -15,6 +15,7 @@ private
     Athlete.find(:all, :conditions => conditions)
   end
   
+if Rails.env.production?
   def name_conditions
     ["athletes.name ILIKE ?", "%#{name}%"] unless name.blank?
   end
@@ -22,6 +23,17 @@ private
   def sport_conditions
     ["athletes.sport ILIKE ?", "%#{sport}%"] unless sport.blank?
   end
+    
+else
+  
+  def name_conditions
+    ["athletes.name LIKE ?", "%#{name}%"] unless name.blank?
+  end
+  
+  def sport_conditions
+    ["athletes.sport LIKE ?", "%#{sport}%"] unless sport.blank?
+  end  
+end
     
   def conditions
   [conditions_clauses.join(' AND '), *conditions_options]

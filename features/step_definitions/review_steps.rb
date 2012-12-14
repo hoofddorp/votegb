@@ -1,11 +1,59 @@
-Given /^that the user is logged in$/ do
+Given /^that the user is on the signup page$/ do
   visit root_path
   click_link("Sign up")
-  fill_in "Name",    with: "review"
-  fill_in "Email",    with: "r@r.com"
-  fill_in "Password", with: "review"
-  fill_in "Password confirmation", with: "review"
-  click_button("Sign up")
+end
+
+And /^he fills in "([^"]*)" with "([^"]*)"$/ do |name, review|
+  # First try with a label
+  #xpath = "//label[normalize-space(translate(.,'*',''))='#{name}' or @for='#{name}']/.."
+  #if page.all(xpath).empty?
+  #  # Then try with a input field
+  #  xpath = "//input[@type='text' and (@id='#{name}' or @name='#{name}')]/.."
+  #end
+  #
+  #within(xpath) do
+    fill_in(name, with: review)
+  #end
+end
+
+And /^he adds in "([^"]*)" with "([^"]*)"$/ do |email, review|
+  ## First try with a label
+  #xpath = "//label[normalize-space(translate(.,'*',''))='#{email}' or @for='#{email}']/.."
+  #if page.all(xpath).empty?
+  #  # Then try with a input field
+  #  xpath = "//input[@type='text' and (@id='#{email}' or @email='#{email}')]/.."
+  #end
+
+  #within(xpath) do
+    fill_in(email, with: review)
+  #end
+end
+
+And /^he enters in "([^"]*)" with "([^"]*)"$/ do |password, review|
+  # First try with a label
+  #xpath = "//label[normalize-space(translate(.,'*',''))='#{password}' or @for='#{password}']/.."
+  #if page.all(xpath).empty?
+  #  # Then try with a input field
+  #  xpath = "//input[@type='text' and (@id='#{password}' or @password='#{password}')]/.."
+  #end
+  #
+  #within(xpath) do
+    fill_in(password, with: review)
+  #end
+end
+
+And /^he slots in "([^"]*)" with "([^"]*)"$/ do |field, review|
+  ## First try with a label
+  #xpath = "//label[normalize-space(translate(.,'*',''))='#{field}' or @for='#{field}']/.."
+  #if page.all(xpath).empty?
+  #  # Then try with a input field
+  #  xpath = "//input[@type='text' and (@id='#{field}' or @field='#{field}')]/.."
+  #end
+  #
+  #within(xpath) do
+    fill_in(field, with: review)
+  #end
+    click_button("Sign up")
 end
 
 And /^he sees Signed in as review$/ do
@@ -24,7 +72,7 @@ When /^he clicks to add a new review$/ do
   click_button("Add a new Review")
 end
 
-And /^he lands on the add a new review page$/ do
+Then /^he lands on the add a new review page$/ do
   page.should have_content('Review summary')
 end
 
