@@ -1,11 +1,14 @@
 class AthletesController < ApplicationController
   
   before_filter :authenticate_admin!, :only => [:new, :edit, :destroy]
+  caches_action :show, :layout => false
+  caches_action :index, :layout => false
   # GET /athletes
   # GET /athletes.json
   def index
     @athletes = Athlete.all
-    
+    Athlete.order("Votes")
+    #@athletes.find(:order => 'Votes')
     @athletes.each do |athlete|
     @athlete = athlete
     end
@@ -24,7 +27,7 @@ class AthletesController < ApplicationController
     #      end
     #    end
     @total_votes
-
+    
     
     respond_to do |format|
       format.html # index.html.erb
@@ -107,7 +110,7 @@ class AthletesController < ApplicationController
   # POST /athletes.json
   def create
     @athlete = Athlete.new(params[:athlete])
-
+    expire_action :action => :index
     respond_to do |format|
       if @athlete.save
         format.html { redirect_to @athlete }
