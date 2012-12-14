@@ -11,6 +11,8 @@ private
 
   def find_athletes
     athletes = Athlete.order(:name)
+    
+    Athlete.find(:all)
 
     athletes = athletes.where("(name) like ?", "%#{name.upcase}%") if name.upcase.present?
     athletes = athletes.where("(sport) like ?", "%#{sport.upcase}%") if sport.upcase.present?
