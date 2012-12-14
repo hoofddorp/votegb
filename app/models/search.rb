@@ -16,11 +16,11 @@ private
   end
   
   def name_conditions
-    ["athletes.name LIKE ?", "%#{name}%"] unless name.blank?
+    ["athletes.name ILIKE ?", "%#{name}%"] unless name.blank?
   end
   
   def sport_conditions
-    ["athletes.sport LIKE ?", "%#{sport}%"] unless sport.blank?
+    ["athletes.sport ILIKE ?", "%#{sport}%"] unless sport.blank?
   end
     
   def conditions
