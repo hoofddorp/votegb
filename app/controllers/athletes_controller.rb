@@ -1,13 +1,13 @@
 class AthletesController < ApplicationController
   
   before_filter :authenticate_admin!, :only => [:new, :edit, :destroy]
-  caches_action :show, :layout => false
+  #caches_action :show, :layout => false
   caches_action :index, :layout => false
   # GET /athletes
   # GET /athletes.json
   def index
     @athletes = Athlete.all
-    Athlete.order("Votes")
+    #Athlete.order("Votes")
     #@athletes.find(:order => 'Votes')
     @athletes.each do |athlete|
     @athlete = athlete
