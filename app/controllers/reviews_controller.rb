@@ -1,4 +1,7 @@
 class ReviewsController < ApplicationController
+  
+  before_filter :authenticate_user_or_admin!, :only => [:new, :edit, :update]
+  
   # GET /reviews
   # GET /reviews.json
   def index

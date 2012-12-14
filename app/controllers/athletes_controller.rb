@@ -1,4 +1,6 @@
 class AthletesController < ApplicationController
+  
+  before_filter :authenticate_admin!, :only => [:new, :edit, :destroy]
   # GET /athletes
   # GET /athletes.json
   def index
