@@ -24,6 +24,7 @@ class AthletesController < ApplicationController
     #      end
     #    end
     @total_votes
+
     
     respond_to do |format|
       format.html # index.html.erb
