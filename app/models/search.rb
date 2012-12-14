@@ -14,6 +14,8 @@ private
    
     athletes = athletes.where("(name) like ?", "%#{name.upcase}%") if name.upcase.present?
     athletes = athletes.where("(sport) like ?", "%#{sport.upcase}%") if sport.upcase.present?
+    athletes = athletes.where("(name) like ?", "%#{name.downcase}%") if name.downcase.present?
+    athletes = athletes.where("(sport) like ?", "%#{sport.downcase}%") if sport.downcase.present?
     athletes
   end
 end
