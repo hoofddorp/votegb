@@ -1,0 +1,424 @@
+commit 238acbcdf4c297663d7b7d18b2efe6d0c2d1d23a
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 06:39:05 2012 +0000
+
+    map not rendering IE, fix
+
+commit 105bec67a46ba0b8139fc8f35cdc34c0c0723ff3
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 05:39:04 2012 +0000
+
+    caching
+
+commit a9285c8d4501618617a7688d60c463f3d326f8d6
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 05:34:48 2012 +0000
+
+    caching
+
+commit a06fba5d4c54ee937ed84ad6cd397c1149e70f58
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 04:36:08 2012 +0000
+
+    review error message fixed
+
+commit 8d28606a5c5f877fad522060e069a879c17d1097
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 04:25:12 2012 +0000
+
+    all tests pass
+
+commit 34cec48384496d6e3fdd222caf10123fdb33e911
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 02:19:34 2012 +0000
+
+    added controller filters
+
+commit ca3caa4d11f7834bc1e33eb5c1b44b67aeb3aedc
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 02:03:18 2012 +0000
+
+    search function error fix
+
+commit 4555cefe97251bc2ee5ca0e29d08abd12af725e9
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 01:58:06 2012 +0000
+
+    search function error fix
+
+commit 4114e9729ec662cd109880dcd672f2e4f782967e
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 01:37:09 2012 +0000
+
+    search function error fix
+
+commit a3944c23bbcc57f39b1ccb6aab0ec1e3cdb65730
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 01:29:31 2012 +0000
+
+    search function error fix
+
+commit 3d0701f647c304424b978bd75490c40752aa21ab
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 01:05:35 2012 +0000
+
+    search show pages edit
+
+commit 9f6c1daa610c17bbcd931ea667f7870fded754a5
+Author: Rob <robclark4@gmail.com>
+Date:   Fri Dec 14 00:11:24 2012 +0000
+
+    search show pages edit
+
+commit 1ba92d8dac96d36e8d8183f5115782832748b06d
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 23:53:17 2012 +0000
+
+    search show pages edit
+
+commit b717838b661a09e66939e693b27f08e7259efa45
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 23:47:28 2012 +0000
+
+    search show pages edit
+
+commit 73fe2dffcca6b9cccdeeb4603568c827b888326b
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 21:53:27 2012 +0000
+
+    search function edit
+
+commit ab8d708e68f35f8d544040414992b7e77951facd
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 21:50:48 2012 +0000
+
+    index thumb css edit
+
+commit 732c392e0f79e724e3f60ae39f43914a97893582
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 21:33:48 2012 +0000
+
+    index thumb css edit
+
+commit 9cd360ee2c75b6a8c034cceac7a0f74ade0c8854
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 21:28:05 2012 +0000
+
+    index thumb css edit
+
+commit d3cd3c177a1f8e40f88a41d0443f3e304a090f12
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 06:05:45 2012 +0000
+
+    added thumbs to index
+
+commit f3e548baa44684e5f34816a0fbb206c8fa04e747
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 05:37:29 2012 +0000
+
+    added thumb image to athletes index
+
+commit 8ddab7886cf95a4bf29ec0580b6804098610e3d2
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 05:22:59 2012 +0000
+
+    added thumb image to athletes index
+
+commit b3174e5409f2aa2f6c2b8cfb9d9d5a5ceeed14e2
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 04:30:04 2012 +0000
+
+    default image added s3
+
+commit 61549d646758b2b5790084ef24a7f5d6f20156ff
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 04:26:10 2012 +0000
+
+    default image added s3
+
+commit 898abb34547ff406c57ee7f39244b4a4f28941aa
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 04:12:49 2012 +0000
+
+    default image added s3
+
+commit 02b5605a854a06034aa27a23e5b8ba4ad2fc89b3
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 04:06:57 2012 +0000
+
+    default image added s3
+
+commit c73d8562af5b6b4802d791786de44a716592597b
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 03:34:46 2012 +0000
+
+    default image added
+
+commit 29bbfd23c960e5a48870d8cc598c88c836cab4a7
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 02:55:44 2012 +0000
+
+    background changed
+
+commit a8bf9fe56aa222c1e2258dd4d878401e677f9f0e
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 02:50:41 2012 +0000
+
+    background changed
+
+commit 5ff8840b2ed125a2446ec1534957d7220f379fc8
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 00:10:58 2012 +0000
+
+    added map to athletes show
+
+commit 110e57426b4fa180fec8add1d9b48143aae04add
+Author: Rob <robclark4@gmail.com>
+Date:   Thu Dec 13 00:05:20 2012 +0000
+
+    added map to athletes show
+
+commit 105417534e5222f8639da923073fc3af16b042e9
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 12 21:18:48 2012 +0000
+
+    upload photo feature added test env
+
+commit b74b041cf6645f2aa275d3fddcc9b497586b6e16
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 12 21:00:34 2012 +0000
+
+    upload photo feature added test env
+
+commit 9e4015dc256383c6fb19fc39885480b2f7b6fa8a
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 12 20:47:47 2012 +0000
+
+    upload photo feature added test env
+
+commit 628805cf825e453b7164df2553eaa31946718e18
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 12 03:34:09 2012 +0000
+
+    search new page
+
+commit 8ad90e57c068c30453db3fa6c1dba22d7b2ceaea
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 12 03:16:44 2012 +0000
+
+    fixed user pages
+
+commit 1e4e9dd91cdea9cfab616c7e47c921c94642620d
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 12 02:20:29 2012 +0000
+
+    home page french
+
+commit 338401d35140c0677cdb207d0229a9ff656a00c8
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 12 02:18:09 2012 +0000
+
+    home page french
+
+commit 450d8d6df9d49f9c3ab751b0b2e4ab90eb2d3844
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 12 02:14:59 2012 +0000
+
+    home page french
+
+commit 84f208405d1ae9a96e2ae3a3780be43a195d2162
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 12 01:02:18 2012 +0000
+
+    home page french
+
+commit d638dafd2e3303c3967d4c3212794184aa49f257
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 12 00:56:27 2012 +0000
+
+    atlete show page
+
+commit af0bccb91651545a0e96371b5363539a65daa2fd
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 22:59:12 2012 +0000
+
+    atlete show page
+
+commit 70317b7eedd712c364b0b68e5906cd4dd13315d6
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 22:42:26 2012 +0000
+
+    atlete show page
+
+commit 602f75f0117862733cdebe95dc2ac45ca81143a9
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 22:34:13 2012 +0000
+
+    atlete show page
+
+commit bca59eebefd0df6d7dcc9a30e41a8d64d2e14f62
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 22:21:02 2012 +0000
+
+    home page
+
+commit c07ff4a518627a9a823a53eab80375732465341a
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 22:07:16 2012 +0000
+
+    home page
+
+commit f9dc1edaf73eab64015ac641ac40ebb1afcc1495
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 22:05:00 2012 +0000
+
+    home page
+
+commit e8490ef71ac16faeacdb3774d339a81691fb3851
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 22:00:31 2012 +0000
+
+    home page
+
+commit 6438ff30300add629df3e57247cd6d310e301d1b
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 21:56:58 2012 +0000
+
+    home page
+
+commit a7b66a7eeb8ae8d5da70a0544c7c02cc9585a0f7
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 19:11:51 2012 +0000
+
+    internationalization
+
+commit cfde019e045bdf1988f6e7d621973be8d250fdb8
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 17:13:39 2012 +0000
+
+    fixed css athletes pages
+
+commit 991dfc6ea84cc76037df85b5b3104f6e7c6bad4e
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 06:22:13 2012 +0000
+
+    sign in to vote added
+
+commit 4573cee27ee195eefeafe4e186fea80f7fe29345
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 06:14:20 2012 +0000
+
+    home page font adjust
+
+commit 9331df814be3450fc5181a75431aad63081826ae
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 06:07:13 2012 +0000
+
+    home page font
+
+commit 8b22affe84bab02f71856de0d7ec5903af224f92
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 05:59:39 2012 +0000
+
+    no luck twitter
+
+commit 6dca33e46bfd25aebd0231d74b6dd2ecf47fc11b
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 05:16:23 2012 +0000
+
+    edit review fixed
+
+commit fee0193e9b336baf7e1901d6e0564b8d497225e4
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 11 04:14:30 2012 +0000
+
+    tests mostly passing, capybara 2.0 prob login
+
+commit c34f216ee58830b63c91a7fb395b597ad57a6147
+Author: Rob <robclark4@gmail.com>
+Date:   Sun Dec 9 23:15:15 2012 +0000
+
+    added voting system with thumbs_up
+
+commit 27af8512c01600992cad2ca162a67f5679804380
+Author: Rob <robclark4@gmail.com>
+Date:   Sun Dec 9 07:00:51 2012 +0000
+
+    acts_as_votable gem tried, not working properly
+
+commit 625dc5beb58cb104ec7f5feec1bc6889b965c9ca
+Author: Rob <robclark4@gmail.com>
+Date:   Sun Dec 9 04:23:22 2012 +0000
+
+    search, reviews functionality added
+
+commit 1597ac944117e11d015c2ce93b73ea1117790c94
+Author: Rob <robclark4@gmail.com>
+Date:   Sun Dec 9 01:38:18 2012 +0000
+
+    added json data
+
+commit ac313b1913c5d0a5eda003d99cc99add26861edd
+Author: Rob <robclark4@gmail.com>
+Date:   Sun Dec 9 00:10:00 2012 +0000
+
+    nav bar edited
+
+commit 85e602cfcd6c230a64222359f7a359c839083397
+Author: Rob <robclark4@gmail.com>
+Date:   Sat Dec 8 22:32:49 2012 +0000
+
+    added athlete mvc
+
+commit a2812f3ab9261ba383cad26c1506db7614e58629
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 5 01:04:45 2012 +0000
+
+    all login options available on nav bar, push to heroku
+
+commit f3d6348878bdd73c744d450c9ead59fee1c31724
+Merge: 724d65c 1183e3e
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 5 00:42:17 2012 +0000
+
+    Merge branch 'search'
+
+commit 1183e3e268ec0a827c163c93318ca1189c8767a1
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 5 00:41:57 2012 +0000
+
+    devise admin created
+
+commit 92ee4575bdb65f1dfc626a28deee17620de46caa
+Author: Rob <robclark4@gmail.com>
+Date:   Wed Dec 5 00:39:11 2012 +0000
+
+    removed country field
+
+commit 8606ce602d59fe91fbab47c1b3273c81494a8c4c
+Author: Rob <robclark4@gmail.com>
+Date:   Tue Dec 4 23:19:26 2012 +0000
+
+    added search model as home page
+    
+    exit
+    quit
+    X
+
+commit 724d65c1e6bca27e9f095a05de0ccdb9a496bd60
+Author: Rob <rob@rob-VirtualBox.(none)>
+Date:   Tue Dec 4 23:09:09 2012 +0000
+
+    pushed to heroku
+
+commit 30385957a31c2b78de121aa16c9b17d066565cfc
+Author: Rob <rob@rob-VirtualBox.(none)>
+Date:   Tue Dec 4 22:52:33 2012 +0000
+
+    setup devise cancan
+
+commit a7ccb7e1a540c99292b59f28d6d735348aaac47d
+Author: Rob <rob@rob-VirtualBox.(none)>
+Date:   Tue Dec 4 16:03:29 2012 +0000
+
+    First commit
