@@ -1,15 +1,231 @@
 // Place all the styles related to the Athletes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-div.athlete_photo{ position: relative;
-	float: left;}
 
-div.athlete_photo_button{ position: relative;
-/*top: -25px;
-margin-top: 25px;*/
+div.index_vote {
+position: relative;
+/*float:left;*/
+background-color: #E0E0E0;
+font-size: 14px;
+width: relative;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
 }
 
-div.vote{
+div.athletes_index {
+position: relative;
+/*float:left;*/
+/*background-color: #FF4500;
+font-weight: bold;
+font-size: 14px;
+width: 150px;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;*/
+}
+
+div.thumb_image {
+    position:relative;
+    background-color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border: 2px solid #a1a1a1;
+    border-radius: 5px;
+}
+
+div.index_athlete {
+position: relative;
+/*float:left;*/
+background-color: #FFFFFF;
+font-weight: bold;
+font-size: 14px;
+width: relative;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+p.ath_name_colour {
+    color:#FFFFFF;
+}
+
+div.index_sport {
+position: relative;
+/*float:left;*/
+background-color: #FFFFFF;
+font-size: 14px;
+width: relative;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+div.index_event {
+position: relative;
+/*float:left;*/
+background-color: #FFFFFF;
+font-size: 14px;
+width: relative;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+#index_header{
+font-size: 16px;
+}
+
+div.vote {
+position: relative;
+float:left;
+color: #FFFFFF;
+font-size: 20px;
+width: 650px;
+padding: 10px 40px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+background-image: url("/images/british-flag.jpg");
+}
+
+div.divide {
+    float:left;
+    width:800px;
+    height:10px;
+}
+
+div.athlete_details {
+position: relative;
+float:left;
+font-size: 14px;
+width: relative;
+padding: 10px 10px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+background-color: #F8F8F8;
+}
+
+div.ath_box {
+position: relative;
+float:left;
+width: 700px;
+padding: 10px 10px;
+height: 540px;
+}
+
+div.ath_details_box {
+position: relative;
+float:left;
+font-size: 14px;
+width: 200px;
+padding: 10px 10px;
+height: 520px;
+}
+
+div.map_photo{
+    margin-bottom: 20px;
+    width: relative;
     position: relative;
-    font-size:18px;
+    float:left;
+    margin-left: 50px;
+}
+
+div.athlete_photo {
+position: relative;
+float:left;
+width: relative;
+padding: 10px 20px;
+border-radius: 25px;
+border: 2px solid #333;
+}
+
+div.photo_image {
+    margin-left: auto;
+    margin-right: auto;
+/*    width: 80%;*/
+}
+
+div.upload_photo {
+    position: relative;
+    float: left;
+}
+
+div.athlete_map{
+	border: 2px solid #333;
+	width:120px;
+	height: 200px;
+	z-index: 5;
+        position: relative;
+        float:left;
+        margin-left: 10px;
+}
+
+/*div.tweets {
+position: relative;
+float:left;
+background-color: #E0E0E0;
+font-size: 20px;
+width: 450px;
+padding: 10px 40px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+div.tweet_text {
+position: relative;
+/*float:left;*/
+/*background-color: #3399FF;
+font-size: 14px;
+width: 250px;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}*/
+
+div.review_athlete_headings {
+position: relative;
+float:left;
+font-size: 14px;
+width: 450px;
+}
+
+div.review_layout {
+position: relative;
+float:left;
+font-size: 14px;
+width: 450px;
+/*margin-left: 100px;*/
+}
+
+div.reviews_speech_bubble {
+position: relative;
+float:left;
+background-color: #F8F8F8;
+font-size: 20px;
+width: 350px;
+padding: 10px 40px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+div.review_box {
+position: relative;
+float:left;
+background-color: #E0E0E0;
+font-size: 20px;
+width: 450px;
+padding: 10px 40px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+margin-left: 25px;
+}
+
+p.review_summary_athlete_show {
+    font-size: 14px;
+    color: red;
+}
+
+div.form_inputs {
+    color: #FFFFFF;
 }

@@ -1,8 +1,17 @@
 class AthletesController < ApplicationController
+  
+  before_filter :authenticate_admin!, :only => [:new, :edit, :destroy]
+  #caches_action :show, :layout => false
+  caches_action :index, :layout => false
   # GET /athletes
   # GET /athletes.json
   def index
     @athletes = Athlete.all
+    #Athlete.order("Votes")
+    #@athletes.find(:order => 'Votes')
+    @athletes.each do |athlete|
+    @athlete = athlete
+    end
     #@arr=[]
     #    @athletes.each do |athlete|
     #      @reviews = athlete.reviews
@@ -19,6 +28,7 @@ class AthletesController < ApplicationController
     #    end
     @total_votes
     
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @athletes }
@@ -28,7 +38,11 @@ class AthletesController < ApplicationController
   # GET /athletes/1
   # GET /athletes/1.json
   def show
-    @athlete = Athlete.find(params[:id])
+    #require 'twitter'
+    @twitter=Twitter.user_timeline("@teamgb")[0..2]
+    #@twitter=Twitter.follow("@Team GB")
+    #@user = User.find(params[:id])
+    @athlete = Athlete.find(params[:id], :include => { :reviews => :user } )
     @reviews = @athlete.reviews
     @arr=[]
     if @reviews.count !=0
@@ -50,8 +64,11 @@ class AthletesController < ApplicationController
     #allVotes = @athlete.votes
 
     #positiveVoteCount = @athlete.votes_for
+    @place = @athlete.region + ' ' + "UK"
     
     @total_votes = @athlete.votes_for
+    
+    #@username = review.user_id
 
     respond_to do |format|
       format.html # show.html.erb
@@ -70,6 +87,7 @@ class AthletesController < ApplicationController
       redirect_to @athlete
       flash[:error] = "You have already voted!"
     end
+    #render :js =>  "alert('You may vote for as many different athletes as you like.');"
   end
 
   # GET /athletes/new
@@ -92,10 +110,10 @@ class AthletesController < ApplicationController
   # POST /athletes.json
   def create
     @athlete = Athlete.new(params[:athlete])
-
+    expire_action :action => :index
     respond_to do |format|
       if @athlete.save
-        format.html { redirect_to @athlete, notice: 'Athlete was successfully created.' }
+        format.html { redirect_to @athlete }
         format.json { render json: @athlete, status: :created, location: @athlete }
       else
         format.html { render action: "new" }
@@ -111,7 +129,7 @@ class AthletesController < ApplicationController
 
     respond_to do |format|
       if @athlete.update_attributes(params[:athlete])
-        format.html { redirect_to @athlete, notice: 'Athlete was successfully updated.' }
+        format.html { redirect_to @athlete}
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

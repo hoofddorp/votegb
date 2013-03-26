@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :athlete do
-    name "MyString"
-    sport "MyString"
+    name "Person"
+    sport "Sailing"
     event "MyString"
     dob "2012-12-08"
     age 1

@@ -2,4 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  search: "Search for your favourite athlete"
+  title: "Who was Britain's favourite athlete of London 2012!"
+  description: "Find your favourite Team GB medallists from London 2012. Review their performances, see what other people said, then vote for your favourites!" 
+  tweets: "Latest Tweets from Team GB"
+  name: "name"
+ 

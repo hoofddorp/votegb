@@ -1,10 +1,11 @@
-<h1>Team GB athletes</h1>
-
+<h1 style = "color:#FFFFFF">Team GB athletes</h1></br>
+<div class= "athletes_index">
 <table>
   <tr>
-    <th>Name</th>
-    <th>Sport</th>
-    <th>Event</th>
+    <th></th>
+    <th id="index_header" style = "color:#FFFFFF">Name</th>
+    <th id="index_header" style = "color:#FFFFFF">Sport</th>
+    <th id="index_header" style = "color:#FFFFFF">Event</th>
     <!--<th>Dob</th>-->
     <!--<th>Age</th>-->
     <!--<th>Sex</th>-->
@@ -13,21 +14,22 @@
     <!--<th>Bronze</th>-->
     <!--<th>Total medals</th>-->
     <!--<th>Region</th>-->
-    <th>Votes</th>
+    <th id="index_header" style = "color:#FFFFFF">Votes</th>
     <th></th>
     <th></th>
-    <th></th>
+    <!--<th></th>-->
     <% if admin_signed_in? %>
     <th></th>
     <th></th>
-    <%end%>
+     <%end%>
   </tr>
 
 <% @athletes.each do |athlete| %>
   <tr>
-    <td>&nbsp;&nbsp;<%= athlete.name %></td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.sport %></td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.event %></td>
+    <td><div class="thumb_image"><%= image_tag athlete.avatar.url(:thumb) %></div></td>
+    <td><p class="ath_name_colour"><div class="index_athlete">&nbsp;&nbsp;<%= link_to athlete.name, athlete %></div></p></td>
+    <td><div class="index_sport">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.sport %></div></td>
+    <td><div class="index_event">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= athlete.event %></div></td>
     <!--<td><%= athlete.dob %></td>-->
     <!--<td><%= athlete.age %></td>-->
     <!--<td><%= athlete.sex %></td>-->
@@ -36,18 +38,19 @@
     <!--<td><%= athlete.bronze %></td>-->
     <!--<td><%= athlete.total_medals %></td>-->
     <!--<td><%= athlete.region %></td>-->
-    <td><%= athlete.votes_for%></td>
+    <td><div class="index_vote"><%= athlete.votes_for%></div></td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td><%= link_to 'Show', athlete %></td>
+    <!--<td><%= link_to 'Show', athlete %></td>-->
     <% if admin_signed_in? %>
-    <td><%= link_to 'Edit', edit_athlete_path(athlete) %></td>
-    <td><%= link_to 'Destroy', athlete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><div class="index_vote"><%= link_to 'Edit', edit_athlete_path(athlete) %></div></td>
+    <td><div class="index_vote"><%= link_to 'Destroy', athlete, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
     <%end%>
   </tr>
 <% end %>
 </table>
-
+</div>
 <br />
-
-<%= link_to 'New Athlete', new_athlete_path %>
+<% if admin_signed_in? %>
+<%= link_to 'Update Athletes', new_athlete_path, :style => "color:#FFFFFF" %>
+<%end%>

@@ -29,19 +29,21 @@ gem "rspec-rails", ">= 2.11.0", :group => [:development, :test]
 gem "cucumber-rails", ">= 1.3.0", :group => :test, :require => false
 gem "database_cleaner", ">= 0.8.0", :group => :test
 gem "launchy", ">= 2.1.2", :group => :test
-gem "capybara", ">= 1.1.2", :group => :test
+gem "capybara", "1.1.2", :group => :test
+gem 'email_spec'
 gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
 gem "bootstrap-sass", ">= 2.1.0.0"
 gem "devise", ">= 2.1.2"
 gem "cancan", ">= 1.6.8"
-gem 'twitter'
+gem "twitter", :require => "twitter"
 gem 'gmaps4rails'
 gem 'simple_form'
 #gem "rolify", ">= 3.2.0"
 #gem 'country_select'
 #gem 'acts_as_votable', '~> 0.4.0'
 gem 'thumbs_up'
-gem "paperclip", "~> 3.0"
+gem 'aws-sdk'
+gem 'paperclip'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

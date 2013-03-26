@@ -20,9 +20,16 @@
                			<div id="nav-centre"></div>
                                 <div id="nav-1"><%= link_to "Athletes", athletes_path %></div>
                                 <% if admin_signed_in? %>
-				<div id="nav-2"><%= link_to "Users", users_path %></div>
+				<div id="nav-1"><%= link_to "Users", users_path %></div>
                                 <% end %>
-				<div id="nav-3"><a href="http://www.teamgb.com/" target = "_blank" >Team GB</a></div>
+				<div id="nav-1"><a href="http://www.teamgb.com/" target = "_blank" >Team GB</a></div>
+                               
+                                
+                                <% if current_page?("/home?lang=fr") %>
+                                <div id="nav-1"><%= link_to "English", root_path %></div>
+                                <% else %>
+                                <div id="nav-1"><%= link_to "Français", "/home?lang=fr" %></div>
+                                <% end %>
                                
           </div>     
         </div>
@@ -33,11 +40,20 @@
         <div class="content">
            <div class="row">
             <div class="span12">
+              <div id="user_nav">
+                <% if admin_signed_in? %>
+                  <p style = "color:#FFFFFF">Signed in as <%= current_admin.email %> </p>
+                  <p><%= link_to "Sign out", destroy_admin_session_path, :method => :delete, :style => "color:#FFFFFF" %> </p>
+                <% elsif user_signed_in? %>
+                  <p style = "color:#FFFFFF">Signed in as <%= current_user.name %>. Not you?
+                  <%= link_to "Sign out", destroy_user_session_path, :method => :delete,:style => "color:#FFFFFF" %></p>
+                <% end %>
+              </div>
               <%= render 'layouts/messages' %>
               <%= yield %>
             </div>
-              <p class="notice"><%= notice %></p>
-              <p class="alert"><%= alert %></p>
+              <!--<p class="notice"><%= notice %></p>-->
+              <!--<p class="alert"><%= alert %></p>-->
           </div>
           <footer>
           </footer>

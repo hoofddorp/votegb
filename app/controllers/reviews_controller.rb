@@ -1,4 +1,7 @@
 class ReviewsController < ApplicationController
+  
+  #before_filter :authenticate_user_or_admin!, :only => [:new, :edit, :update]
+  
   # GET /reviews
   # GET /reviews.json
   def index
@@ -60,7 +63,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.update_attributes(params[:review])
-        format.html { redirect_to @review, notice: 'Review was successfully updated.' }
+        format.html { redirect_to @review.athlete, notice: 'Review was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,7 +79,7 @@ class ReviewsController < ApplicationController
     @review.destroy
 
     respond_to do |format|
-      format.html { redirect_to reviews_url }
+      format.html { redirect_to @review.athlete }
       format.json { head :no_content }
     end
   end

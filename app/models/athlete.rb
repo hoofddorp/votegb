@@ -1,6 +1,9 @@
 class Athlete < ActiveRecord::Base
   attr_accessible :avatar, :age, :average_rating, :bronze, :dob, :event, :gold, :name, :region, :sex, :silver, :sport, :total_medals
 
+  validates :name, :region, :presence => true
+  validates_uniqueness_of :name, :case_sensitive => false
+
   has_many :reviews
   has_many :votes
   
@@ -9,18 +12,23 @@ class Athlete < ActiveRecord::Base
   if Rails.env.production?
   has_attached_file :avatar,
 
-  :styles => { :medium => "300x300>", :thumb => "100x100>" },
+  :styles => { :medium => "300x300>", :thumb => "36x36>" },
     :storage => :s3,
     :url => ":s3_domain_url",
-    :path => "/:class/avatars/:id_:basename.:style.:extension",
+    :default_url => "http://awadvotegb.s3.amazonaws.com/avatar/missing_medium.jpeg",
+    :path => "/:class/avatar/:id_:basename.:style.:extension",
+
     :s3_credentials => {
       :bucket            => ENV['S3_BUCKET_NAME'],
       :access_key_id     => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']}
-  
-  else
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
-  #,:default_url => "/images/index.jpeg"
+
+else
+  has_attached_file :avatar,
+   :styles => { :medium => "300x300>", :thumb => "20x20>" },
+   :default_url => "/avatars/medium/missing_:style.jpeg"
+   
   end
-validates_attachment_content_type :avatar, :content_type => ['image/jpg', 'image/jpeg', 'image/png', 'image/pjepg', 'image/x-png', 'image/pjpeg']
+  validates_attachment_content_type :avatar, :content_type => ['image/jpg', 'image/jpeg', 'image/png', 'image/pjepg', 'image/x-png', 'image/pjpeg']
+
 end

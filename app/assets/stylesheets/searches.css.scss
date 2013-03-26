@@ -1,3 +1,84 @@
 // Place all the styles related to the Searches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+div.intro {
+    width: relative;
+    padding: 10px 20px;
+    border: 2px solid #a1a1a1;
+    border-radius: 25px;
+    margin-left: 20px;
+    background-color: #FFFFFF;
+    margin-right: 20px;
+}
+
+p.home {
+    width: relative;
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+}
+
+p.explain {
+    width: relative;
+    font-style: italic;
+    color: #600000;
+}
+
+div.home_box {
+position: relative;
+width: 850px;
+padding: 5px 10px;
+height: 420px;
+/*border: 2px solid #a1a1a1;*/
+}
+
+div.tweets {
+position: relative;
+float:left;
+background-color: #E0E0E0;
+font-size: 14px;
+width: 300px;
+padding: 10px 30px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+height: 420px;
+margin: 10px;
+}
+
+div.tweet_text {
+position: relative;
+/*float:left;*/
+background-color: #3399FF;
+font-size: 10px;
+width: 160px;
+padding: 10px 20px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+}
+
+div.search_box {
+position: relative;
+float:left;
+background-color: #E0E0E0;
+font-size: 20px;
+width: relative;
+padding: 10px 30px;
+border: 2px solid #a1a1a1;
+border-radius: 25px;
+height: 420px;
+margin: 10px;
+}
+
+div.search_list h4, h6 {
+    color: #FFFFFF;
+    display: inline;
+    background: orange;
+    padding: 5px;
+    margin: 5px;
+    line-height: 20px;
+}
+
+p#no_match {
+    font-weight: bold;
+    font-size: 16px;
+}

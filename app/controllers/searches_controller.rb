@@ -20,6 +20,8 @@ class SearchesController < ApplicationController
   # GET /searches/new.json
   def new
     @search = Search.new
+    
+    @twitter=Twitter.user_timeline("@teamgb")[0..1]
 
     respond_to do |format|
       format.html # new.html.erb
